@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virové varování</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #333;
+            color: #f00;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #e74c3c;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.7);
+        }
+
+        p {
+            font-size: 24px;
+            margin-bottom: 40px;
+            color: #f39c12;
+        }
+
+        .warning {
+            color: #ffcc00;
+            font-size: 28px;
+            margin-bottom: 40px;
+            animation: blink 1s infinite alternate;
+        }
+
+        .button {
+            background-color: #ff5e5e;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            transition: background-color 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .button:hover {
+            background-color: #e74c3c;
+        }
+
+        @keyframes blink {
+            50% {
+                color: #f39c12;
+            }
+        }
+
+        .loading {
+            font-size: 24px;
+            color: #ffcc00;
+            margin-top: 20px;
+            font-style: italic;
+            animation: blink 1s infinite alternate;
+        }
+    </style>
+</head>
+<body>
+    <h1>VIRUS DETEKOVÁN!</h1>
+    <p>Váš počítač byl napaden škodlivým softwarem.</p>
+    <p class="warning">Důrazně doporučujeme okamžitě provést bezpečnostní aktualizaci!</p>
+    
+    <button class="button" onclick="window.location.reload();">Aktualizovat stránku</button>
+
+    <p class="loading">Pokud se stránka neaktualizuje, klikněte na tlačítko.</p>
+
+    <!-- JavaScript kód pro automatické přesměrování -->
+    <script>
+        // Automatické přesměrování po 5 sekundách na stránku s aktualizací
+        setTimeout(function() {
+            alert("Stránka se aktualizuje...");
+            window.location.href = "index.html";  // Přejdi na jinou stránku po aktualizaci
+        }, 5000);  // Po 5 sekundách se stránka přesměruje
+    </script>
+</body>
+</html>

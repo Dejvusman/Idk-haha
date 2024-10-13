@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Normální stránka</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #4CAF50;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .message {
+            margin-top: 30px;
+            font-size: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vítejte na mé stránce!</h1>
+    <p>Tato stránka je normální, ale po 5 sekundách budete přesměrováni.</p>
+
+    <p class="message">Během chvíle se stránka automaticky přesměruje na důležitou aktualizaci.</p>
+
+    <script>
+        // Přidáme kontrolní výpis pro lepší diagnostiku
+        console.log("Přesměrování na stránku s virovým varováním za 5 sekund...");
+        
+        // Po 5 sekundách se stránka přesměruje na stránku s varováním před "virem"
+        setTimeout(function() {
+            console.log("Přesměrování se provádí...");
+            window.location.href = "important-update.html";  // Přejdi na stránku s varováním před virem
+        }, 5000);  // Po 5 sekundách se stránka přesměruje
+    </script>
+</body>
+</html>
